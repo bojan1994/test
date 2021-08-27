@@ -1,19 +1,19 @@
 <?php
 
-use App\Controllers\HomeController;
+use App\Controllers\StudentController;
 use App\Models\Student;
 
 $request = $_SERVER['REQUEST_URI'];
 
-$homeController = new HomeController();
+$studentController = new StudentController();
 $student = new Student();
 
 switch ($request) {
     case '/test/' :
-        $homeController->index($student);
+        $studentController->index($student);
         break;
     case '/test/student?student_id=' . $_GET['student_id'] :
-        $homeController->show($student);
+        $studentController->show($student);
         break;
     default:
         http_response_code(404);

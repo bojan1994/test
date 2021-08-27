@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Student;
 
-class HomeController extends ViewController
+class StudentController extends ViewController
 {
     /**
      * @var $students
