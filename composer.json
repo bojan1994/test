@@ -1,0 +1,12 @@
+{
+    "name": "bojan/test",
+    "description": "Quantox technologies test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "bojan1994",
+            "email": "b.mihajlovic1994@gmail.com"
+        }
+    ],
+    "require": {}
+}
