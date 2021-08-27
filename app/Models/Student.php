@@ -22,4 +22,17 @@ class Student
         }
         return $output;
     }
+
+    public function getById($id)
+    {
+        $conn = Database::getConnection();
+        $st = $conn->prepare('SELECT * FROM students WHERE id = ?');
+        $st->bindParam(1, $id);
+        $st->execute();
+        $output = '';
+        while ($row = $st->fetch(\PDO::FETCH_OBJ)) {
+            $output = $row;
+        }
+        return $output;
+    }
 }

@@ -12,7 +12,13 @@
         foreach ($this->students as $student) {
             $schoolBoard = $student->school_board_id == 1 ? 'CSM' : 'CSMB';
             ?>
-            <li><a href="/test/student/<?php echo $student->id; ?>"><?php echo $student->firstname; ?> <?php echo $student->lastname; ?> - <?php echo $schoolBoard; ?></a></li>
+            <li>
+                <?php echo $student->firstname; ?> <?php echo $student->lastname; ?> - <?php echo $schoolBoard; ?>
+                <form action="/test/student" method="GET">
+                    <input type="hidden" name="student_id" value="<?php echo $student->id; ?>"/>
+                    <button type="submit">Calculate grades</button>
+                </form>
+            </li>
             <?php
         }
         ?>
