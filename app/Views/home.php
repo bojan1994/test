@@ -16,7 +16,7 @@
                 <?php echo $student->firstname; ?> <?php echo $student->lastname; ?> - <?php echo $schoolBoard; ?>
                 <form action="/test/student" method="GET">
                     <input type="hidden" name="student_id" value="<?php echo $student->id; ?>"/>
-                    <button type="submit">Calculate grades</button>
+                    <button type="submit">Calculate</button>
                 </form>
             </li>
             <?php
